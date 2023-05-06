@@ -3,11 +3,11 @@ clear a;
 arduino('COM4', 'Uno'); 
 configurePin(a, 'D10'); 
 configurePin(a, 'D11'); 
-C=0; 
+c=0; 
 noisyec=[];
 while(c<100)
     v=readvoltage(a, "A0");
-    C=C+1; 
+    c=c+1; 
     noisyec(c, 1) = v; 
     plot(noisyec);
     xlim([0.0 100.0]); 
