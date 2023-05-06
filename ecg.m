@@ -2,12 +2,11 @@ clear noisyec;
 clear a; 
 arduino('COM4', 'Uno'); 
 configurePin(a, 'D10'); 
-configurePin(a, '111'); 
+configurePin(a, 'D11'); 
 C=0; 
-data=[];
+noisyec=[];
 while(c<100)
     v=readvoltage(a, "A0");
-    X= V; 
     C=C+1; 
     noisyec(c, 1) = v; 
     plot(noisyec);
